@@ -1,0 +1,14 @@
+<h1>Get in touch</h1>
+
+<form action="/contact" method="get">
+    <input type="text" name="member" placeholder="Who are you looking for?">
+    <input type="submit">
+</form>
+
+<ol>
+    <% @members.each do |team_member| %>
+        <li><%= team_member.capitalize %></li>
+    <% end %>
+</ol>
+
+<%= link_to "Back to Home", home_path %>
